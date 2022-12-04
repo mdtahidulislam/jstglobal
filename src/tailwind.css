@@ -115,6 +115,14 @@
         height: clamp(25px, 4.5vw, 59px);
     }
 
+    @media (min-width: 1441px) {
+        .section-pagination {
+            font-size: 3.47vw;
+            line-height: 4.1vw;
+            height: 4.1vw;
+        }
+    }
+
     .box-img-title {
         font-size: clamp(33px, 3.6vw, 48px);
         line-height: clamp(40px, 4.5vw, 56px);
@@ -240,6 +248,7 @@
     .service-box-content {
         position: relative;
     }
+
     .service-box-content:after,
     .service-box-content:before {
         content: '';
@@ -249,9 +258,11 @@
         height: 100vh;
         background-color: var(--black-2);
     }
+
     .service-box-content:after {
         right: 0;
     }
+
     .service-box-content:before {
         left: 0;
     }
@@ -264,8 +275,7 @@
     /*======================================= 
                 footer css 
     ========================================*/
-    .footer-top-tel a,
-    .footer-top-email a {
+    .footer-top a {
         font-size: clamp(25px, 3.6vw, 48px);
         line-height: clamp(25px, 4.5vw, 50px);
     }
