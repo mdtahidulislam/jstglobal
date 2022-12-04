@@ -1,0 +1,290 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* custom css */
+@layer base {
+
+    /* =================================================
+                    Fonts
+    ================================================= */
+    /* roboto-300 - latin */
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        src: url('../fonts/roboto-v30-latin-300.eot');
+        /* IE9 Compat Modes */
+        src: local(''),
+            url('../fonts/roboto-v30-latin-300.eot?#iefix') format('embedded-opentype'),
+            /* IE6-IE8 */
+            url('../fonts/roboto-v30-latin-300.woff2') format('woff2'),
+            /* Super Modern Browsers */
+            url('../fonts/roboto-v30-latin-300.woff') format('woff'),
+            /* Modern Browsers */
+            url('../fonts/roboto-v30-latin-300.ttf') format('truetype'),
+            /* Safari, Android, iOS */
+            url('../fonts/roboto-v30-latin-300.svg#Roboto') format('svg');
+        /* Legacy iOS */
+    }
+
+    /* roboto-regular - latin */
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        src: url('../fonts/roboto-v30-latin-regular.eot');
+        /* IE9 Compat Modes */
+        src: local(''),
+            url('../fonts/roboto-v30-latin-regular.eot?#iefix') format('embedded-opentype'),
+            /* IE6-IE8 */
+            url('../fonts/roboto-v30-latin-regular.woff2') format('woff2'),
+            /* Super Modern Browsers */
+            url('../fonts/roboto-v30-latin-regular.woff') format('woff'),
+            /* Modern Browsers */
+            url('../fonts/roboto-v30-latin-regular.ttf') format('truetype'),
+            /* Safari, Android, iOS */
+            url('../fonts/roboto-v30-latin-regular.svg#Roboto') format('svg');
+        /* Legacy iOS */
+    }
+
+    /* roboto-500 - latin */
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        src: url('../fonts/roboto-v30-latin-500.eot');
+        /* IE9 Compat Modes */
+        src: local(''),
+            url('../fonts/roboto-v30-latin-500.eot?#iefix') format('embedded-opentype'),
+            /* IE6-IE8 */
+            url('../fonts/roboto-v30-latin-500.woff2') format('woff2'),
+            /* Super Modern Browsers */
+            url('../fonts/roboto-v30-latin-500.woff') format('woff'),
+            /* Modern Browsers */
+            url('../fonts/roboto-v30-latin-500.ttf') format('truetype'),
+            /* Safari, Android, iOS */
+            url('../fonts/roboto-v30-latin-500.svg#Roboto') format('svg');
+        /* Legacy iOS */
+    }
+
+    /* roboto-700 - latin */
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        src: url('../fonts/roboto-v30-latin-700.eot');
+        /* IE9 Compat Modes */
+        src: local(''),
+            url('../fonts/roboto-v30-latin-700.eot?#iefix') format('embedded-opentype'),
+            /* IE6-IE8 */
+            url('../fonts/roboto-v30-latin-700.woff2') format('woff2'),
+            /* Super Modern Browsers */
+            url('../fonts/roboto-v30-latin-700.woff') format('woff'),
+            /* Modern Browsers */
+            url('../fonts/roboto-v30-latin-700.ttf') format('truetype'),
+            /* Safari, Android, iOS */
+            url('../fonts/roboto-v30-latin-700.svg#Roboto') format('svg');
+        /* Legacy iOS */
+    }
+
+    /* =================================================
+                    CSS Variable
+    ================================================= */
+    :root {
+        --primary-font: 'Roboto', sans-serif;
+
+        --blue-1: #48B4FD;
+        --black-2: #383838;
+        --space-x: 4.167vw;
+        --btn-space-x: 50px;
+    }
+
+    /*======================================= 
+                    common css 
+    ========================================*/
+    .section-title {
+        font-size: clamp(40px, 7vw, 70px);
+        /* line-height: clamp(45px, 6.5vw, 82px); */
+        line-height: clamp(45px, 8.5vw, 82px);
+    }
+
+    .section-pagination {
+        font-size: clamp(20px, 3.5vw, 50px);
+        line-height: clamp(25px, 4.5vw, 59px);
+        height: clamp(25px, 4.5vw, 59px);
+    }
+
+    .box-img-title {
+        font-size: clamp(33px, 3.6vw, 48px);
+        line-height: clamp(40px, 4.5vw, 56px);
+    }
+
+    /*======================================= 
+                    menu css 
+    ========================================*/
+    .header-menu li:first-child a {
+        margin-left: 0;
+    }
+
+    .header-menu li:last-child a {
+        margin-right: 0;
+    }
+
+    .header-menu li a.active:before {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /* menu bar icon anim */
+    .line-mid {
+        transition: all 0.5s linear;
+    }
+
+    /* 
+    .line-top,
+    .line-bottom {
+        transition: all 0.3s linear;
+    } */
+
+    .menu-bar-lines.active .line-mid {
+        transform: translateX(50px);
+    }
+
+    .menu-bar-lines.active .line-top {
+        /* transform: translateY(8px) rotateZ(45deg); */
+        animation: line-top-anim 0.5s linear forwards;
+    }
+
+    .menu-bar-lines.active .line-bottom {
+        /* transform: translateY(-8px) rotateZ(-45deg); */
+        animation: line-btm-anim 0.5s linear forwards;
+    }
+
+    @keyframes line-top-anim {
+        0% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(8px);
+        }
+
+        100% {
+            transform: translateY(8px) rotate(45deg);
+        }
+    }
+
+    @keyframes line-btm-anim {
+        0% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-8px);
+        }
+
+        100% {
+            transform: translateY(-8px) rotate(-45deg);
+            /* margin-top: -16px; */
+        }
+    }
+
+
+    .menu-bar-lines.close .line-top {
+        /* transform: translateY(-8px) rotateZ(-45deg); */
+        animation: line-top-anim-init 0.5s linear forwards;
+    }
+
+    .menu-bar-lines.close .line-bottom {
+        /* transform: translateY(-8px) rotateZ(-45deg); */
+        animation: line-btm-anim-init 0.5s linear forwards;
+    }
+
+    @keyframes line-top-anim-init {
+        0% {
+            transform: translateY(8px) rotate(0deg);
+        }
+
+        /* 50% {
+            transform: translateY(8px);
+        } */
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    @keyframes line-btm-anim-init {
+        0% {
+            transform: translateY(-8px) rotate(0deg);
+        }
+
+        /* 50% {
+            transform: translateY(-8px);
+        } */
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    .menu-bar-btn {
+        border-radius: 50%;
+        transition: all 0.3s linear 0.5s;
+    }
+
+    /*======================================= 
+            Industries & markets page
+    ========================================*/
+    .service-box-content {
+        position: relative;
+    }
+    .service-box-content:after,
+    .service-box-content:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 1px;
+        height: 100vh;
+        background-color: var(--black-2);
+    }
+    .service-box-content:after {
+        right: 0;
+    }
+    .service-box-content:before {
+        left: 0;
+    }
+
+    .service-box:nth-child(2) .service-box-content:after,
+    .service-box:nth-child(2) .service-box-content:before {
+        display: none;
+    }
+
+    /*======================================= 
+                footer css 
+    ========================================*/
+    .footer-top-tel a,
+    .footer-top-email a {
+        font-size: clamp(25px, 3.6vw, 48px);
+        line-height: clamp(25px, 4.5vw, 50px);
+    }
+
+    /*======================================= 
+                responsive css 
+    ========================================*/
+    @media (min-width: 1440.9px) {}
+
+    @media (max-width: 1280px) {}
+
+    @media (max-width:1024px) {}
+
+    @media (max-width: 992px) {}
+
+    @media (max-width: 768px) {
+        :root {
+            --space-x: 15px;
+        }
+    }
+
+}
