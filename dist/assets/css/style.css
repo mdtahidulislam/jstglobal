@@ -687,6 +687,18 @@ video {
   transition: all 0.3s linear 0.5s;
 }
 
+/* mobile menu */
+
+.mobile-menu li a {
+  font-size: clamp(30px, 4.5vw, 40px);
+  line-height: clamp(30px, 4.5vw, 40px);
+}
+
+.mobile-menu-area.active {
+  visibility: visible;
+  opacity: 1;
+}
+
 /*======================================= 
             Industries & markets page
     ========================================*/
@@ -847,6 +859,10 @@ video {
   visibility: visible;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .static {
   position: static;
 }
@@ -861,6 +877,13 @@ video {
 
 .relative {
   position: relative;
+}
+
+.inset-0 {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
 }
 
 .top-0 {
@@ -1203,6 +1226,11 @@ video {
   padding-bottom: 45px;
 }
 
+.py-\[20px\] {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .px-btnspacex {
   padding-left: var(--btn-space-x);
   padding-right: var(--btn-space-x);
@@ -1360,6 +1388,10 @@ video {
   color: var(--black-2);
 }
 
+.opacity-0 {
+  opacity: 0;
+}
+
 .opacity-60 {
   opacity: 0.6;
 }
@@ -1373,10 +1405,20 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition-transform {
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
 }
 
 .duration-150 {
@@ -1385,6 +1427,10 @@ video {
 
 .duration-300 {
   transition-duration: 300ms;
+}
+
+.duration-700 {
+  transition-duration: 700ms;
 }
 
 .ease-linear {
@@ -1500,15 +1546,15 @@ video {
   height: 1px;
 }
 
-.after\:w-screen::after {
-  content: var(--tw-content);
-  width: 100vw;
-}
-
 .after\:w-max::after {
   content: var(--tw-content);
   width: -moz-max-content;
   width: max-content;
+}
+
+.after\:w-screen::after {
+  content: var(--tw-content);
+  width: 100vw;
 }
 
 .after\:-translate-x-1\/2::after {
@@ -1655,6 +1701,16 @@ video {
     padding-bottom: 3.125vw;
   }
 
+  .min4ksm\:px-\[3\.47vw\] {
+    padding-left: 3.47vw;
+    padding-right: 3.47vw;
+  }
+
+  .min4ksm\:py-\[1\.39vw\] {
+    padding-top: 1.39vw;
+    padding-bottom: 1.39vw;
+  }
+
   .min4ksm\:py-\[3\.47vw\] {
     padding-top: 3.47vw;
     padding-bottom: 3.47vw;
@@ -1673,21 +1729,6 @@ video {
   .min4ksm\:py-\[8\.3vw\] {
     padding-top: 8.3vw;
     padding-bottom: 8.3vw;
-  }
-
-  .min4ksm\:py-\[1\.39vw\] {
-    padding-top: 1.39vw;
-    padding-bottom: 1.39vw;
-  }
-
-  .min4ksm\:px-\[1\.39vw\] {
-    padding-left: 1.39vw;
-    padding-right: 1.39vw;
-  }
-
-  .min4ksm\:px-\[3\.47vw\] {
-    padding-left: 3.47vw;
-    padding-right: 3.47vw;
   }
 
   .min4ksm\:pt-\[4\.86vw\] {
@@ -1807,8 +1848,16 @@ video {
 }
 
 @media (max-width: 992px) {
+  .maxdp\:relative {
+    position: relative;
+  }
+
   .maxdp\:bottom-spacex {
     bottom: var(--space-x);
+  }
+
+  .maxdp\:z-\[999\] {
+    z-index: 999;
   }
 
   .maxdp\:mt-5 {

@@ -242,6 +242,18 @@
         transition: all 0.3s linear 0.5s;
     }
 
+
+    /* mobile menu */
+    .mobile-menu li a {
+        font-size: clamp(30px, 4.5vw, 40px);
+        line-height: clamp(30px, 4.5vw, 40px);
+    }
+
+    .mobile-menu-area.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
     /*======================================= 
             Industries & markets page
     ========================================*/

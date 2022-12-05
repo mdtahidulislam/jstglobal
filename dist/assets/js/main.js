@@ -7,6 +7,8 @@
         if ($('.js-menu-bar-lines').length) {
             $('.js-menu-bar-lines').on('click', function () {
                 $(this).toggleClass('active');
+                $('.js-mobile-menu-area').toggleClass('active');
+                revealSpltTextAnim('.mobile-menu li a');
                 if ($(this).hasClass('active')) {
                     $(this).removeClass('close');
                     $(this).parent('.menu-bar-btn').css({
@@ -89,13 +91,14 @@
         ======================================*/
         if ($('.js-section').length) {
             revealSpltTextAnim('.js-section .js-section-title span');
+            fadeInUpAnim('.js-section .js-btn', 0.8, 20, 0.8);
             fadeInUpAnim('.js-section .js-line', 0.8, 20, 0.8);
             fadeInUpAnim('.js-section .js-section-desc', 0.8, 20, 1.1);
         }
         /*======================================
                     scrollify section js
         ======================================*/
-        
+
 
     });
 }(jQuery));
