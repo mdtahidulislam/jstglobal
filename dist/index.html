@@ -534,24 +534,42 @@
             scrollSpeed: 1500,
             before: function (index, sections) {
                 // add active class on current section
-                $('.section').removeClass('active')
+                $('.section').removeClass('active');
                 let current = $.scrollify.current();
                 current.addClass('active');
                 if ($('.js-section.active').length) {
                     // current active section animation
-                    imgZoomOutAnim('.js-section.active .js-section-bg')
+                    if ($('.js-section-bg').length) {
+                        imgZoomOutAnim('.js-section.active .js-section-bg')
+                    }
                     // revealTextAnim('.js-section.active .js-section-title span');
-                    revealSpltTextAnim('.js-section.active .js-section-title span');
-                    fadeInUpAnim('.js-section.active .js-btn', 0.8, 20, 0.8);
+                    if ($('.js-section-title span').length) {
+                        revealSpltTextAnim('.js-section.active .js-section-title span');
+                    }
 
-                    // (thisElm, duration, fromYoffset, toDelay)
-                    fadeInUpAnim('.js-section.active .js-line', 0.8, 20, 0.8);
-                    fadeInUpAnim('.js-section.active .js-section-desc', 0.8, 20, 1.1);
-                    fadeInUpAnim('.js-section.active .js-section-link', 0.8, 20, 1);
+                    if ($('.js-btn').length) {
+                        fadeInUpAnim('.js-section.active .js-btn', 0.8, 20, 0.8);
+                    }
+
+                    // fadeInUpAnim(thisElm, duration, fromYoffset, toDelay)
+                    if ($('.js-line').length) {
+                        fadeInUpAnim('.js-section.active .js-line', 0.8, 20, 0.8);
+                    }
+                    if ($('.js-section-desc')) {
+                        fadeInUpAnim('.js-section.active .js-section-desc', 0.8, 20, 1.1);
+                    }
+                    if ($('.js-section-link').length) {
+                        fadeInUpAnim('.js-section.active .js-section-link', 0.8, 20, 1);
+                    }
 
                     // let height = Math.round($('.js-dynamic-pagin-number').height());
-                    paginationAnim('.js-section.active .js-sec-prev', 0.4, 0, height, 1);
-                    paginationAnim('.js-section.active .js-sec-next', 0.4, 0, -height, 1.4);
+                    if ($('.js-sec-prev').length) {
+                        paginationAnim('.js-section.active .js-sec-prev', 0.4, 0, height, 1);
+                    } if ($('.js-sec-next').length) {
+                        paginationAnim('.js-section.active .js-sec-next', 0.4, 0, -height, 1.4);
+                    }
+
+
                 }
             },
             afterResize: function () {

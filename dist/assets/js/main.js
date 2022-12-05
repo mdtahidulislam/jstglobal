@@ -47,7 +47,6 @@
 
         const revealSpltTextAnim = (thisElm) => {
             let revealText = document.querySelectorAll(thisElm);
-            console.log(revealText)
             let results = Splitting({ target: thisElm, by: "lines" });
 
             results.forEach((splitResult) => {
@@ -90,10 +89,18 @@
                 start scrolling
         ======================================*/
         if ($('.js-section').length) {
-            revealSpltTextAnim('.js-section .js-section-title span');
-            fadeInUpAnim('.js-section .js-btn', 0.8, 20, 0.8);
-            fadeInUpAnim('.js-section .js-line', 0.8, 20, 0.8);
-            fadeInUpAnim('.js-section .js-section-desc', 0.8, 20, 1.1);
+            if ($('.js-section-title span').length) {
+                revealSpltTextAnim('.js-section .js-section-title span');
+            }
+            if ($('.js-btn').length) {
+                fadeInUpAnim('.js-section .js-btn', 0.8, 20, 0.8);
+            }
+            if ($('.js-line').length) {
+                fadeInUpAnim('.js-section .js-line', 0.8, 20, 0.8);
+            }
+            if ($('.js-section-desc').length) {
+                fadeInUpAnim('.js-section .js-section-desc', 0.8, 20, 1.1);
+            }
         }
         /*======================================
                     scrollify section js
