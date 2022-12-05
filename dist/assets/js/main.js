@@ -27,24 +27,10 @@
                 AOS animation
         ======================================*/
         AOS.init();
+
         /*======================================
                 reveal text animation
         ======================================*/
-        // const revealTextAnim = (thisElm) => {
-        //     const tl = gsap.timeline();
-
-        //     tl.from(thisElm, 1, {
-
-        //         y: 100,
-        //         ease: "power4.out",
-        //         delay: 0.5,
-        //         // skewY: 7,
-        //         // stagger: {
-        //         //     amount: 0.3
-        //         // }
-        //     });
-        // }
-
         const revealSpltTextAnim = (thisElm) => {
             let revealText = document.querySelectorAll(thisElm);
             let results = Splitting({ target: thisElm, by: "lines" });
@@ -85,12 +71,14 @@
             gsap.fromTo(thisElm, duration, { autoAlpha: 0, y: fromYoffset }, { autoAlpha: 1, y: 0, delay: toDelay });
         }
         /*======================================
-                banner animation before
-                start scrolling
+                banner animation 
         ======================================*/
         if ($('.js-section').length) {
+            // mousemove parallax bg & text
+            // parallaxAnim();
+
             if ($('.js-section-title span').length) {
-                revealSpltTextAnim('.js-section .js-section-title span');
+                revealSpltTextAnim('.js-section-title span');
             }
             if ($('.js-btn').length) {
                 fadeInUpAnim('.js-section .js-btn', 0.8, 20, 0.8);
@@ -102,9 +90,6 @@
                 fadeInUpAnim('.js-section .js-section-desc', 0.8, 20, 1.1);
             }
         }
-        /*======================================
-                    scrollify section js
-        ======================================*/
 
 
     });

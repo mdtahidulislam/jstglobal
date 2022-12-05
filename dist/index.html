@@ -35,7 +35,7 @@
                             class="block font-primary font-medium text-[16px] leading-[19px] text-black capitalize py-[45px] mx-[1.36vw] relative before:absolute before:top-0 before:left-0 before:w-full before:h-[5px] before:bg-blue1 before:invisible before:opacity-0 before:transition-all before:duration-300 hover:before:visible hover:before:opacity-100 min4ksm:text-[1.11vw] min4ksm:leading-[1.32vw] min4ksm:py-[3.125vw] min4ksm:before:h-[0.35vw]">What
                             We
                             Do</a></li>
-                    <li><a href="#"
+                    <li><a href="industries-markets.html"
                             class="block font-primary font-medium text-[16px] leading-[19px] text-black capitalize py-[45px] mx-[1.36vw] relative before:absolute before:top-0 before:left-0 before:w-full before:h-[5px] before:bg-blue1 before:invisible before:opacity-0 before:transition-all before:duration-300 hover:before:visible hover:before:opacity-100 min4ksm:text-[1.11vw] min4ksm:leading-[1.32vw] min4ksm:py-[3.125vw] min4ksm:before:h-[0.35vw]">Industries
                             &
                             Markets</a></li>
@@ -67,7 +67,7 @@
                                 class="block font-primary font-medium text-white capitalize py-[20px] hover:opacity-60">What
                                 We
                                 Do</a></li>
-                        <li><a href="#"
+                        <li><a href="industries-markets.html"
                                 class="block font-primary font-medium text-white capitalize py-[20px] hover:opacity-60">Industries
                                 &
                                 Markets</a></li>
@@ -85,7 +85,7 @@
 
     <!-- start banner -->
     <section
-        class="js-scrollify js-section hero-banner home-banner px-spacex min-h-screen flex items-center relative overflow-hidden">
+        class="js-scrollify js-section hero-banner home-banner px-spacex min-h-screen flex items-center relative overflow-hidden active">
         <!-- pt-[293px] pb-[213px] -->
         <div
             class="section-bg js-section-bg bg-home-banner bg-no-repeat bg-cover bg-center absolute -top-[5%] -left-[5%] w-[115%] h-[115%]">
@@ -298,11 +298,11 @@
     <section class="js-scrollify js-section careers px-spacex min-h-screen relative overflow-hidden">
         <!-- pt-[293px] pb-[213px] -->
         <div
-            class="section-bg js-section-bg bg-careers bg-no-repeat bg-cover bg-center absolute -top-[5%] -left-[5%] w-[115%] h-[115%]">
+            class="section-bg js-section-bg js-parallax bg-careers bg-no-repeat bg-cover bg-center absolute -top-[5%] -left-[5%] w-[115%] h-[115%]">
 
         </div>
         <article
-            class="section-content js-section-content bnr-article pt-[150px] pb-[69px] flex flex-col place-content-between min-h-screen relative maxdp:justify-center maxdp:items-center maxdp:place-content-center maxdp:p-0">
+            class="section-content js-section-content js-parallax bnr-article pt-[150px] pb-[69px] flex flex-col place-content-between min-h-screen relative maxdp:justify-center maxdp:items-center maxdp:place-content-center maxdp:p-0">
             <h1
                 class="section-title js-section-title font-primary font-normal text-white mb-10 maxdp:mb-5 overflow-hidden relative min4ksm:text-[4.86vw] min4ksm:leading-[5.69vw] min4ksm:mb-[2.78vw] maxmd:text-center">
                 <span class="block">Careers</span>
@@ -376,7 +376,7 @@
                                 class="block font-primary font-medium text-[16px] leading-[19px] text-black capitalize duration-300 hover:opacity-60 min4ksm:text-[1.11vw] min4ksm:leading-[1.32vw]">What
                                 We
                                 Do</a></li>
-                        <li class="px-[1.36vw]"><a href="#"
+                        <li class="px-[1.36vw]"><a href="industries-markets.html"
                                 class="block font-primary font-medium text-[16px] leading-[19px] text-black capitalize duration-300 hover:opacity-60 min4ksm:text-[1.11vw] min4ksm:leading-[1.32vw]">Industries
                                 &
                                 Markets</a></li>
@@ -408,14 +408,13 @@
 
     <script>
         /*======================================
-            parallax section bg & text js - mousemove
+            parallax bg & text animation
         ======================================*/
-
-        if ($('.js-section').length) {
-            var rect = $('.js-section')[0].getBoundingClientRect();
+        const parallaxAnim = () => {
+            var rect = $('.js-section.active')[0].getBoundingClientRect();
             var mouse = { x: 0, y: 0, moved: false };
 
-            $(".js-section").mousemove(function (e) {
+            $(".js-section.active").mousemove(function (e) {
                 mouse.moved = true;
                 mouse.x = e.clientX - rect.left;
                 mouse.y = e.clientY - rect.top;
@@ -424,14 +423,14 @@
             // Ticker event will be called on every frame
             gsap.ticker.add(function () {
                 if (mouse.moved) {
-                    parallaxIt(".js-section-content", 8);
                     parallaxIt(".js-section-bg", -10);
+                    parallaxIt(".js-section-content", 8);
                 }
                 mouse.moved = false;
             });
 
             function parallaxIt(target, movement) {
-                gsap.to(target, 0.5, {
+                gsap.to(target, 1, {
                     x: (mouse.x - rect.width / 2) / rect.width * movement,
                     y: (mouse.y - rect.height / 2) / rect.height * movement,
                     ease: 'power4.out'
@@ -439,9 +438,16 @@
             }
 
             $(window).on('resize scroll', function () {
-                rect = $('.js-section')[0].getBoundingClientRect();
+                if ($('.js-section.active').length) {
+                    rect = $('.js-section.active')[0].getBoundingClientRect();
+                } else {
+                    return false;
+                }
             });
         }
+        /*======================================
+                revealtext animation
+        ======================================*/
         const revealSpltTextAnim = (thisElm) => {
             let revealText = document.querySelectorAll(thisElm);
             let results = Splitting({ target: thisElm, by: "lines" });
@@ -479,7 +485,7 @@
                 image zoom out animation js
         ======================================*/
         const imgZoomOutAnim = (thisElm) => {
-            gsap.fromTo(thisElm, 2, { scale: 1.3 }, { scale: 1, ease: 'power4.out' });
+            gsap.fromTo(thisElm, 2, { scale: 1.3 }, { scale: 1.1, ease: 'power4.out' });
         }
 
         /*======================================
@@ -488,6 +494,7 @@
         const fadeInUpAnim = (thisElm, duration, fromYoffset, toDelay) => {
             gsap.fromTo(thisElm, duration, { autoAlpha: 0, y: fromYoffset }, { autoAlpha: 1, y: 0, delay: toDelay });
         }
+
         /*======================================
                     pagination js
         ======================================*/
@@ -527,6 +534,11 @@
             );
         }
         let height = Math.round($('.js-dynamic-pagin-number').height());
+
+        // befroe init scrollify
+        parallaxAnim();
+
+        // init scrollify
         $.scrollify({
             section: ".js-scrollify",
             scrollbars: false,
@@ -534,10 +546,12 @@
             scrollSpeed: 1500,
             before: function (index, sections) {
                 // add active class on current section
-                $('.section').removeClass('active');
+                $('.js-section').removeClass('active');
                 let current = $.scrollify.current();
                 current.addClass('active');
                 if ($('.js-section.active').length) {
+                    // mousemove parallax bg & text
+                    parallaxAnim();
                     // current active section animation
                     if ($('.js-section-bg').length) {
                         imgZoomOutAnim('.js-section.active .js-section-bg')
