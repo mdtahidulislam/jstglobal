@@ -23,6 +23,29 @@
             });
         }
 
+        /**
+         * On Scroll Sticky Menu
+        */
+        // function stickyMenu() {
+        //     if ($(window).scrollTop() > 300) {
+        //         $('.js-header').addClass('!fixed');
+        //         $('.js-header-nav').addClass('hidden');
+        //         $('.js-menu-bar-btn').addClass('!block');
+        //     } else {
+        //         $('.js-header').removeClass('!fixed');
+        //         $('.js-header-nav').removeClass('hidden');
+        //         $('.js-menu-bar-btn').removeClass('!block');
+        //     }
+        // }
+        // $(window).on('load', function () {
+        //     stickyMenu();
+        // });
+        // $(window).scroll(function () {
+        //     stickyMenu();
+        // });
+
+
+
         /*======================================
                 AOS animation
         ======================================*/

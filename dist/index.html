@@ -395,6 +395,8 @@
 
     <!-- jQuery -->
     <script src="assets/js/jquery.min.js"></script>
+    <!-- jwuery easing -->
+    <script src="assets/js/jquery.easing.js"></script>
     <!-- aos -->
     <script src="assets/js/aos.js"></script>
     <!-- gsap -->
@@ -543,7 +545,8 @@
             section: ".js-scrollify",
             scrollbars: false,
             interstitialSection: ".js-no-scrollify",
-            scrollSpeed: 1500,
+            easing: jQuery.easing.swing,
+            scrollSpeed: 950,
             before: function (index, sections) {
                 // add active class on current section
                 $('.js-section').removeClass('active');
