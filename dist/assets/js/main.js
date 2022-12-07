@@ -29,12 +29,21 @@
         // function stickyMenu() {
         //     if ($(window).scrollTop() > 300) {
         //         $('.js-header').addClass('!fixed');
+        //         if ($(window).width() > 992) {
+        //             console.log('yes')
+        //             $('.js-header-inner').addClass('pr-spacex');
+        //         }
         //         $('.js-header-nav').addClass('hidden');
-        //         $('.js-menu-bar-btn').addClass('!block');
+        //         // $('.js-menu-bar-btn').addClass('!block fixed right-[var(--space-x)] z-[999]');
+        //         $('.js-menu-bar-btn').addClass('!block z-[999]');
         //     } else {
         //         $('.js-header').removeClass('!fixed');
+        //         if ($(window).width() > 992) {
+        //             $('.js-header-inner').removeClass('pr-spacex');
+        //         }
         //         $('.js-header-nav').removeClass('hidden');
-        //         $('.js-menu-bar-btn').removeClass('!block');
+        //         // $('.js-menu-bar-btn').removeClass('!block fixed right-[var(--space-x)] z-[999]');
+        //         $('.js-menu-bar-btn').removeClass('!block z-[999]');
         //     }
         // }
         // $(window).on('load', function () {
@@ -80,7 +89,7 @@
                 let tl = gsap.timeline();
                 tl.set(revealText, { autoAlpha: 1 });
                 tl.from(lines, 0.5, {
-                    yPercent: 90,
+                    yPercent: 100,
                     ease: Power4.out,
                     delay: 0.5
                 });

@@ -198,6 +198,66 @@
         }
     }
 
+    @media (min-width: 1441px) {
+        .menu-bar-lines.active .line-mid {
+            transform: translateX(3.47vw);
+        }
+
+        .menu-bar-lines.active .line-top {
+            /* transform: translateY(8px) rotateZ(45deg); */
+            animation: line-top-anim 0.5s linear forwards;
+        }
+
+        @keyframes line-top-anim {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(0.56vw);
+            }
+
+            100% {
+                transform: translateY(0.56vw) rotate(45deg);
+            }
+        }
+
+        @keyframes line-btm-anim {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-0.56vw);
+            }
+
+            100% {
+                transform: translateY(-0.56vw) rotate(-45deg);
+                /* margin-top: -16px; */
+            }
+        }
+
+        @keyframes line-top-anim-init {
+            0% {
+                transform: translateY(0.56vw) rotate(0deg);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        @keyframes line-btm-anim-init {
+            0% {
+                transform: translateY(-0.56vw) rotate(0deg);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    }
+
 
     .menu-bar-lines.close .line-top {
         /* transform: translateY(-8px) rotateZ(-45deg); */
@@ -214,10 +274,6 @@
             transform: translateY(8px) rotate(0deg);
         }
 
-        /* 50% {
-            transform: translateY(8px);
-        } */
-
         100% {
             transform: translateY(0px);
         }
@@ -227,10 +283,6 @@
         0% {
             transform: translateY(-8px) rotate(0deg);
         }
-
-        /* 50% {
-            transform: translateY(-8px);
-        } */
 
         100% {
             transform: translateY(0px);

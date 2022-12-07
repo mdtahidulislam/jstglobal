@@ -17,15 +17,15 @@
 
 <body>
     <header
-        class="header pl-spacex absolute top-0 left-0 w-full mt-10 z-[999] min4ksm:mt-[2.78vw] maxdp:pr-spacex maxdp:mt-5">
-        <div class="header-inner flex flex-wrap justify-between items-center">
+        class="header js-header pl-spacex absolute top-0 left-0 w-full mt-10 z-[999] min4ksm:mt-[2.78vw] maxdp:pr-spacex maxdp:mt-5">
+        <div class="header-inner js-header-inner flex flex-wrap justify-between items-center">
             <div
-                class="header-logo min4ksm:flex-[0_0_11.6vw] min4ksm:max-w-[11.6vw] maxdp:flex-[0_0_150px] maxdp:max-w-[150px] maxdp:relative maxdp:z-[999]">
+                class="header-logo min4ksm:flex-[0_0_11.6vw] min4ksm:max-w-[11.6vw] maxdp:flex-[0_0_150px] maxdp:max-w-[150px] relative z-[999]">
                 <a href="#" class="block">
                     <img class="w-full" src="assets/img/logo.svg" alt="JSTGlobal">
                 </a>
             </div>
-            <nav class="header-nav bg-white px-spacex maxdp:hidden">
+            <nav class="header-nav js-header-nav bg-white px-spacex maxdp:hidden">
                 <ul class="header-menu flex flex-wrap">
                     <li><a href="#"
                             class="block font-primary font-medium text-[16px] leading-[19px] text-black capitalize py-[45px] mx-[1.36vw] relative before:absolute before:top-0 before:left-0 before:w-full before:h-[5px] before:bg-blue1 before:invisible before:opacity-0 before:transition-all before:duration-300 hover:before:visible hover:before:opacity-100 active min4ksm:text-[1.11vw] min4ksm:leading-[1.32vw] min4ksm:py-[3.125vw] min4ksm:before:h-[0.35vw]">Who
@@ -47,12 +47,19 @@
                             Us</a></li>
                 </ul>
             </nav>
-            <div class="menu-bar-btn w-14 h-14 hidden maxdp:block maxdp:relative maxdp:z-[999]">
+            <div
+                class="menu-bar-btn js-menu-bar-btn w-14 h-14 hidden maxdp:block relative z-[999] min4ksm:w-[3.89vw] min4ksm:h-[3.89vw]">
                 <div
                     class="menu-bar-lines js-menu-bar-lines w-full h-full flex flex-col justify-center items-center cursor-pointer overflow-hidden">
-                    <div class="line line-top js-line-top w-8 h-[2px] bg-white mb-[6px] last:mb-0"></div>
-                    <div class="line line-mid js-line-mid w-8 h-[2px] bg-white mb-[6px] last:mb-0"></div>
-                    <div class="line line-bottom js-line-bottom w-8 h-[2px] bg-white mb-[6px] last:mb-0"></div>
+                    <div
+                        class="line line-top js-line-top w-8 h-[2px] bg-white mb-[6px] last:mb-0 min4ksm:w-[2.22vw] min4ksm:h-[0.14vw] min4ksm:mb-[0.42vw]">
+                    </div>
+                    <div
+                        class="line line-mid js-line-mid w-8 h-[2px] bg-white mb-[6px] last:mb-0 min4ksm:w-[2.22vw] min4ksm:h-[0.14vw] min4ksm:mb-[0.42vw]">
+                    </div>
+                    <div
+                        class="line line-bottom js-line-bottom w-8 h-[2px] bg-white mb-[6px] last:mb-0 min4ksm:w-[2.22vw] min4ksm:h-[0.14vw] min4ksm:mb-[0.42vw]">
+                    </div>
                 </div>
             </div>
             <div
@@ -60,22 +67,22 @@
                 <nav class="mobile-nav">
                     <ul class="mobile-menu flex flex-col justify-center items-center">
                         <li><a href="#"
-                                class="block font-primary font-medium text-white capitalize py-[20px] hover:opacity-60">Who
+                                class="block font-primary font-medium text-white capitalize py-[20px] min4ksm:!text-[2.78vw] min4ksm:!leading-[2.78vw] min4ksm:py-[1.39vw]">Who
                                 We
                                 Are</a></li>
                         <li><a href="#"
-                                class="block font-primary font-medium text-white capitalize py-[20px] hover:opacity-60">What
+                                class="block font-primary font-medium text-white capitalize py-[20px] min4ksm:!text-[2.78vw] min4ksm:!leading-[2.78vw] min4ksm:py-[1.39vw]">What
                                 We
                                 Do</a></li>
                         <li><a href="industries-markets.html"
-                                class="block font-primary font-medium text-white capitalize py-[20px] hover:opacity-60">Industries
+                                class="block font-primary font-medium text-white capitalize py-[20px] min4ksm:!text-[2.78vw] min4ksm:!leading-[2.78vw] min4ksm:py-[1.39vw]">Industries
                                 &
                                 Markets</a></li>
                         <li><a href="#"
-                                class="block font-primary font-medium text-white capitalize py-[20px] hover:opacity-60">Sustainability</a>
+                                class="block font-primary font-medium text-white capitalize py-[20px] min4ksm:!text-[2.78vw] min4ksm:!leading-[2.78vw] min4ksm:py-[1.39vw]">Sustainability</a>
                         </li>
                         <li><a href="#"
-                                class="block font-primary font-medium text-white capitalize py-[20px] hover:opacity-60">Contact
+                                class="block font-primary font-medium text-white capitalize py-[20px] min4ksm:!text-[2.78vw] min4ksm:!leading-[2.78vw] min4ksm:py-[1.39vw]">Contact
                                 Us</a></li>
                     </ul>
                 </nav>
@@ -91,9 +98,10 @@
             class="section-bg js-section-bg bg-home-banner bg-no-repeat bg-cover bg-center absolute -top-[5%] -left-[5%] w-[115%] h-[115%]">
 
         </div>
-        <article class="section-content js-section-content bnr-article max-w-[78.1%] relative maxdp:max-w-full">
+        <article
+            class="section-content js-section-content bnr-article max-w-[78.1%] relative maxdp:max-w-full maxdp:mx-auto maxdp:flex maxdp:flex-col maxdp:justify-center maxdp:items-center">
             <h1
-                class="section-title js-section-title font-primary font-normal text-white mb-10 overflow-hidden relative min4ksm:text-[4.86vw] min4ksm:leading-[5.69vw] min4ksm:mb-[2.78vw]">
+                class="section-title js-section-title font-primary font-normal text-white mb-10 overflow-hidden relative min4ksm:text-[4.86vw] min4ksm:leading-[5.69vw] min4ksm:mb-[2.78vw] maxdp:text-center">
                 <span class="block">We process and
                     trade
                     animal fat and other oil byproducts.</span>
@@ -476,7 +484,7 @@
                 let tl = gsap.timeline();
                 tl.set(revealText, { autoAlpha: 1 });
                 tl.from(lines, 0.5, {
-                    yPercent: 90,
+                    yPercent: 100,
                     ease: Power4.out,
                     delay: 0.5
                 });
