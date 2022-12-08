@@ -11,14 +11,10 @@
                 revealSpltTextAnim('.mobile-menu li a');
                 if ($(this).hasClass('active')) {
                     $(this).removeClass('close');
-                    $(this).parent('.menu-bar-btn').css({
-                        'border': '1px solid rgba(255, 255, 255, 0.8)'
-                    })
+                    $(this).parent('.js-menu-bar-btn').addClass('!fixed right-spacex border border-white/[0.8]');
                 } else {
                     $(this).addClass('close');
-                    $(this).parent('.menu-bar-btn').css({
-                        'border': '1px solid rgba(255, 255, 255, 0)'
-                    })
+                    $(this).parent('.js-menu-bar-btn').removeClass('!fixed right-spacex border border-white/[0.8]');
                 }
             });
         }
