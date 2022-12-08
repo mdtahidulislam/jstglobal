@@ -119,6 +119,9 @@
             }
         }
 
+        // banner content smooth animation
+        let tl = gsap.timeline();
+        tl.to('.js-banner-content', { duration: .5, autoAlpha: 1, ease: Expo.easeInOut });
 
     });
 }(jQuery));
