@@ -50,7 +50,6 @@
         // });
 
 
-
         /*======================================
                 AOS animation
         ======================================*/
@@ -126,6 +125,23 @@
         // banner content smooth animation
         let tl = gsap.timeline();
         tl.to('.js-banner-content', { duration: .5, autoAlpha: 1, ease: Expo.easeInOut });
+
+        /*======================================
+                section intersection 
+        ======================================*/
+        const interSectObserver = (thisClass) => {
+            let observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        revealSpltTextAnim('.js-intersect span');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+            document.querySelectorAll(thisClass).forEach(elm => { observer.observe(elm) });
+
+        }
+        interSectObserver('.js-intersect');
 
     });
 }(jQuery));

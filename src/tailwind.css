@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    .items-initial {
+        align-items: initial;
+    }
+}
+
 /* custom css */
 @layer base {
 
@@ -96,6 +102,7 @@
 
         --blue-1: #48B4FD;
         --black-2: #383838;
+        --black-3: #898989;
         --space-x: 4.167vw;
         --btn-space-x: 50px;
     }
@@ -198,13 +205,12 @@
         }
     }
 
-    @media (min-width: 1441px) {
+    /* @media (min-width: 1441px) {
         .menu-bar-lines.active .line-mid {
             transform: translateX(3.47vw);
         }
 
         .menu-bar-lines.active .line-top {
-            /* transform: translateY(8px) rotateZ(45deg); */
             animation: line-top-anim 0.5s linear forwards;
         }
 
@@ -233,7 +239,6 @@
 
             100% {
                 transform: translateY(-0.56vw) rotate(-45deg);
-                /* margin-top: -16px; */
             }
         }
 
@@ -256,7 +261,7 @@
                 transform: translateY(0px);
             }
         }
-    }
+    } */
 
 
     .menu-bar-lines.close .line-top {
@@ -304,6 +309,8 @@
     .mobile-menu-area.active {
         visibility: visible;
         opacity: 1;
+        transition: all 0.7s;
+
     }
 
     /*======================================= 
@@ -358,6 +365,10 @@
     @media (max-width: 768px) {
         :root {
             --space-x: 15px;
+        }
+
+        .single-member {
+            align-items: inherit !important;
         }
     }
 

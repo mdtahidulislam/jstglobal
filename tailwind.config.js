@@ -19,7 +19,8 @@ module.exports = {
                 // gray3: 'var(--gray-3)',
                 // gray4: 'var(--gray-4)',
                 blue1: 'var(--blue-1)',
-                black2: 'var(--black-2)'
+                black2: 'var(--black-2)',
+                black3: 'var(--black-3)'
             },
             spacing: {
                 spacex: 'var(--space-x)',
@@ -57,6 +58,8 @@ module.exports = {
                 'home-banner': "url('../img/home-banner.png')",
                 'ind-mar-banner': "url('../img/ind-mar-bnr.png')",
                 'we-do-banner': "url('../img/we-do-bnr.png')",
+                'sustainability-banner': "url('../img/sustainability-bnr.png')",
+                'who-we-banner': "url('../img/who-we-bnr.png')",
                 'about-us': "url('../img/who.png')",
                 'what-we-do': "url('../img/do.png')",
                 'ind-mar': "url('../img/industries.png')",
