@@ -56,6 +56,7 @@ module.exports = {
             backgroundImage: {
                 'home-banner': "url('../img/home-banner.png')",
                 'ind-mar-banner': "url('../img/ind-mar-bnr.png')",
+                'we-do-banner': "url('../img/we-do-bnr.png')",
                 'about-us': "url('../img/who.png')",
                 'what-we-do': "url('../img/do.png')",
                 'ind-mar': "url('../img/industries.png')",

@@ -1132,6 +1132,14 @@ video {
   max-width: 69vw;
 }
 
+.max-w-\[45\.9\%\] {
+  max-width: 45.9%;
+}
+
+.max-w-\[54\.09\%\] {
+  max-width: 54.09%;
+}
+
 .flex-\[0_0_100\%\] {
   flex: 0 0 100%;
 }
@@ -1146,6 +1154,14 @@ video {
 
 .flex-\[0_0_51\.75\%\] {
   flex: 0 0 51.75%;
+}
+
+.flex-\[0_0_45\.9\%\] {
+  flex: 0 0 45.9%;
+}
+
+.flex-\[0_0_54\.09\%\] {
+  flex: 0 0 54.09%;
 }
 
 .transform {
@@ -1270,6 +1286,10 @@ video {
 
 .bg-reliable-bg {
   background-image: url('../img/propelar.png');
+}
+
+.bg-we-do-banner {
+  background-image: url('../img/we-do-bnr.png');
 }
 
 .bg-cover {
