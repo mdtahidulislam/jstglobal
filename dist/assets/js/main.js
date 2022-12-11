@@ -127,6 +127,13 @@
         tl.to('.js-banner-content', { duration: .5, autoAlpha: 1, ease: Expo.easeInOut });
 
         /*======================================
+        image white overlay trnsition animation  
+        ======================================*/
+        // const imgWhiteOverlayAnim = (thisclass) => {
+        //     gsap.to(thisclass, 0.5, { xPercent: -100, delay: 1.5 })
+        // }
+
+        /*======================================
                 section intersection 
         ======================================*/
         const interSectObserver = (thisClass) => {
@@ -134,14 +141,18 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         revealSpltTextAnim('.js-intersect span');
+                        // if ($('.js-img-overlay').length) {
+                        //     imgWhiteOverlayAnim('.js-img-overlay');
+                        // }
                         observer.unobserve(entry.target);
                     }
                 });
-            });
+            }, { rootMargin: "-250px" });
             document.querySelectorAll(thisClass).forEach(elm => { observer.observe(elm) });
 
         }
         interSectObserver('.js-intersect');
+        // interSectObserver('.js-img-overlay');
 
     });
 }(jQuery));
