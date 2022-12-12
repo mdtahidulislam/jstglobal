@@ -55,16 +55,16 @@ module.exports = {
 
             },
             backgroundImage: {
-                'home-banner': "url('../img/home-banner.png')",
+                'home-banner': "url('../img/home-banner-2x.png')",
                 'ind-mar-banner': "url('../img/ind-mar-bnr.png')",
                 'we-do-banner': "url('../img/we-do-bnr.png')",
                 'sustainability-banner': "url('../img/sustainability-bnr.png')",
                 'who-we-banner': "url('../img/who-we-bnr.png')",
                 'about-us': "url('../img/who.png')",
-                'what-we-do': "url('../img/do.png')",
-                'ind-mar': "url('../img/industries.png')",
-                'sustainability': "url('../img/sustainability.png')",
-                'careers': "url('../img/careers.png')",
+                'what-we-do': "url('../img/do-2x.png')",
+                'ind-mar': "url('../img/industries-2x.png')",
+                'sustainability': "url('../img/sustainability-2x.png')",
+                'careers': "url('../img/careers-2x.png')",
                 'reliable-bg': "url('../img/propelar.png')",
             },
             gridTemplateColumns: {
