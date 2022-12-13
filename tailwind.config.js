@@ -39,6 +39,7 @@ module.exports = {
             },
             screens: {
                 // 'min769px': '769px',
+                'min4kxxlg': { 'min': '2300px' },
                 'min4kxlg': { 'min': '2100px' },
                 'min4klg': { 'min': '1800px' },
                 'min4ksm': { 'min': '1441px' },
