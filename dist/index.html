@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body class="home-scrollify">
     <header
         class="header js-header pl-spacex absolute top-0 left-0 w-full mt-10 z-[999] min4ksm:mt-[2.78vw] maxdp:pr-spacex maxdp:mt-5">
         <div class="header-inner js-header-inner flex flex-wrap justify-between items-center">
@@ -584,8 +584,10 @@
             section: ".js-scrollify",
             scrollbars: false,
             interstitialSection: ".js-no-scrollify",
-            easing: jQuery.easing.swing,
-            scrollSpeed: 950,
+            // easing: jQuery.easing.swing,
+            // easing: 'easeOutSine',
+            // easing: 'easeOutExpo',
+            // scrollSpeed: 950,
             before: function (index, sections) {
                 // add active class on current section
                 $('.js-section').removeClass('active');
@@ -595,9 +597,9 @@
                     // mousemove parallax bg & text
                     parallaxAnim();
                     // current active section animation
-                    if ($('.js-section-bg').length) {
-                        imgZoomOutAnim('.js-section.active .js-section-bg')
-                    }
+                    // if ($('.js-section-bg').length) {
+                    //     imgZoomOutAnim('.js-section.active .js-section-bg')
+                    // }
                     // revealTextAnim('.js-section.active .js-section-title span');
                     if ($('.js-section-title span').length) {
                         revealSpltTextAnim('.js-section.active .js-section-title span');

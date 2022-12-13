@@ -135,16 +135,26 @@
         line-height: clamp(40px, 4.5vw, 56px);
     }
 
-    section:not(.active) h1 {
+    .home-scrollify section:not(.active) h1 {
         opacity: 0 !important;
     }
 
-    section:not(.active) .btn {
+    .home-scrollify section:not(.active) .btn {
         opacity: 0 !important;
     }
 
-    section:not(.active) .section-pagination {
+    .home-scrollify section:not(.active) .section-pagination {
         opacity: 0 !important;
+    }
+
+    .home-scrollify .section-bg {
+        transform: scale3d(1.5, 1.5, 1) !important;
+        transition: all 1.5s ease .1s;
+    }
+
+    .home-scrollify .active .section-bg {
+        transform: scale3d(1.2, 1.2, 1) !important;
+        transition: all 1.5s ease .1s;
     }
 
     /*======================================= 
