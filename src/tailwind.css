@@ -135,6 +135,18 @@
         line-height: clamp(40px, 4.5vw, 56px);
     }
 
+    section:not(.active) h1 {
+        opacity: 0 !important;
+    }
+
+    section:not(.active) .btn {
+        opacity: 0 !important;
+    }
+
+    section:not(.active) .section-pagination {
+        opacity: 0 !important;
+    }
+
     /*======================================= 
                     menu css 
     ========================================*/
