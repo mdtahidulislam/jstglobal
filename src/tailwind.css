@@ -175,7 +175,7 @@
 
     /* menu bar icon anim */
     .line-mid {
-        transition: all 0.5s linear;
+        transition: all 0.5s ease;
     }
 
     /* 
@@ -227,65 +227,6 @@
         }
     }
 
-    /* @media (min-width: 1441px) {
-        .menu-bar-lines.active .line-mid {
-            transform: translateX(3.47vw);
-        }
-
-        .menu-bar-lines.active .line-top {
-            animation: line-top-anim 0.5s linear forwards;
-        }
-
-        @keyframes line-top-anim {
-            0% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(0.56vw);
-            }
-
-            100% {
-                transform: translateY(0.56vw) rotate(45deg);
-            }
-        }
-
-        @keyframes line-btm-anim {
-            0% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-0.56vw);
-            }
-
-            100% {
-                transform: translateY(-0.56vw) rotate(-45deg);
-            }
-        }
-
-        @keyframes line-top-anim-init {
-            0% {
-                transform: translateY(0.56vw) rotate(0deg);
-            }
-
-            100% {
-                transform: translateY(0px);
-            }
-        }
-
-        @keyframes line-btm-anim-init {
-            0% {
-                transform: translateY(-0.56vw) rotate(0deg);
-            }
-
-            100% {
-                transform: translateY(0px);
-            }
-        }
-    } */
-
-
     .menu-bar-lines.close .line-top {
         /* transform: translateY(-8px) rotateZ(-45deg); */
         animation: line-top-anim-init 0.5s linear forwards;
@@ -317,8 +258,10 @@
     }
 
     .menu-bar-btn {
+        border: 1px solid rgba(255, 255, 255, 0.0);
         border-radius: 50%;
-        transition: all 0.3s linear 0.5s;
+        /* transition: all 0.3s linear 0.5s; */
+        transition: all 0.7s ease 0.5s;
     }
 
 
@@ -328,11 +271,24 @@
         line-height: clamp(30px, 4.5vw, 40px);
     }
 
+    .mobile-menu-area {
+        transition: all 0.5s ease;
+    }
+
     .mobile-menu-area.active {
         visibility: visible;
         opacity: 1;
-        transition: all 0.7s;
+        transition: all 0.5s ease;
 
+    }
+
+    .menu-bar-lines .line {
+        transition: all 0.9s ease;
+    }
+
+    .menu-bar-lines.active .line {
+        background-color: black;
+        transition: all 0.9s ease;
     }
 
     /*======================================= 
