@@ -15,13 +15,13 @@
                     $('.js-header-inner').addClass('fixed');
                     $(this).removeClass('close');
                     $(this).parent('.js-menu-bar-btn').addClass('!fixed right-spacex border border-black');
+                    revealSpltTextAnim('.mobile-menu li a');
                 } else {
                     $('.js-logo').removeClass('invert');
                     $('.js-header-inner').removeClass('fixed');
                     $(this).addClass('close');
                     $(this).parent('.js-menu-bar-btn').removeClass('!fixed right-spacex border border-black');
                 }
-                revealSpltTextAnim('.mobile-menu li a');
             });
         }
 
@@ -91,13 +91,15 @@
             let revealLines = revealText.forEach((element) => {
                 const lines = element.querySelectorAll(".mask .words");
 
-                let tl = gsap.timeline();
-                tl.set(revealText, { autoAlpha: 1 });
-                tl.from(lines, 0.5, {
-                    yPercent: 100,
-                    // ease: Power4.out,
-                    delay: 0.5
-                });
+                // let tl = gsap.timeline();
+                // tl.set(revealText, { autoAlpha: 1 });
+                // tl.from(lines, 0.5, {
+                //     yPercent: 100,
+                //     // ease: Power4.out,
+                //     delay: 0.5
+                // });
+
+                element.classList.add('revealtext-anim');
             });
         }
 
