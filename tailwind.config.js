@@ -43,6 +43,7 @@ module.exports = {
                 'min4kxlg': { 'min': '2100px' },
                 'min4klg': { 'min': '1800px' },
                 'min4ksm': { 'min': '1441px' },
+                'max4k': { 'max': '1439px' },
                 'maxxl': { 'max': '1280px' },
                 'maxlg': { 'max': '1024px' },
                 'maxdp': { 'max': '992px' },
