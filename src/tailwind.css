@@ -110,6 +110,20 @@
     /*======================================= 
                     common css 
     ========================================*/
+    .jst-container {
+        max-width: 1350px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .jst-row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
     .section-title {
         font-size: clamp(40px, 6vw, 70px);
         /* line-height: clamp(45px, 6.5vw, 82px); */
