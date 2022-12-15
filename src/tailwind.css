@@ -111,9 +111,9 @@
                     common css 
     ========================================*/
     .section-title {
-        font-size: clamp(40px, 7vw, 70px);
+        font-size: clamp(40px, 6vw, 70px);
         /* line-height: clamp(45px, 6.5vw, 82px); */
-        line-height: clamp(45px, 8.5vw, 82px);
+        line-height: clamp(45px, 7.5vw, 82px);
     }
 
     .section-pagination {
@@ -303,7 +303,7 @@
     .mobile-menu .splitting .words {
         opacity: 0;
     }
-    
+
     .revealtext-anim .mask .words {
         /* transform: translateY(0) !important; */
         animation: revealTextAnim 0.5s ease 0.5s both;
