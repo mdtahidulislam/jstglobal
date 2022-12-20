@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-    .items-initial {
-        align-items: initial;
-    }
-}
-
 /* custom css */
 @layer base {
 
