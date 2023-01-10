@@ -118,10 +118,35 @@
         margin-right: -15px;
     }
 
-    .section-title {
+    /* .section-title {
         font-size: clamp(40px, 6vw, 70px);
-        /* line-height: clamp(45px, 6.5vw, 82px); */
         line-height: clamp(45px, 7.5vw, 82px);
+    } */
+
+    .section-title {
+        font-size: 70px;
+        line-height: 82px;
+    }
+
+    @media (max-width: 1280px) {
+        .section-title {
+            font-size: 60px;
+            line-height: 72px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .section-title {
+            font-size: 50px;
+            line-height: 57px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .section-title {
+            font-size: 40px;
+            line-height: 45px;
+        }
     }
 
     .section-pagination {
@@ -138,9 +163,28 @@
         }
     } */
 
-    .box-img-title {
+    /* .box-img-title {
         font-size: clamp(33px, 3.6vw, 48px);
         line-height: clamp(40px, 4.5vw, 56px);
+    } */
+
+    .box-img-title {
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    @media (max-width: 1024px) {
+        .box-img-title {
+            font-size: 37px;
+            line-height: 46px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .box-img-title {
+            font-size: 30px;
+            line-height: 35px;
+        }
     }
 
     .home-scrollify section:not(.active) h1 {
@@ -274,9 +318,28 @@
 
 
     /* mobile menu */
-    .mobile-menu li a {
+    /* .mobile-menu li a {
         font-size: clamp(30px, 4.5vw, 40px);
         line-height: clamp(30px, 4.5vw, 40px);
+    } */
+
+    .mobile-menu li a {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    @media (max-width:768px) {
+        .mobile-menu li a {
+            font-size: 35px;
+            line-height: 40px;
+        }
+    }
+
+    @media (max-width:640px) {
+        .mobile-menu li a {
+            font-size: 30px;
+            line-height: 30px;
+        }
     }
 
     .mobile-menu-area {
