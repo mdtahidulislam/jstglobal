@@ -167,5 +167,18 @@
         // interSectObserver('.js-img-overlay');
 
         revealSpltTextAnim('.mobile-menu li a');
+
+        // fix 100vh for ios
+
+        if ($(window).width() <= 992) {
+            const appHeight = () => {
+                const doc = document.documentElement;
+                doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+            }
+            window.addEventListener('resize', appHeight)
+            appHeight();
+        } else {
+            doc.style.setProperty('--app-height', `auto`);
+        }
     });
 }(jQuery));

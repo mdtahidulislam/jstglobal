@@ -487,7 +487,27 @@
 
     @media (max-width:1024px) {}
 
-    @media (max-width: 992px) {}
+    @media (max-width: 992px) {
+        :root {
+            --app-height: 100%;
+        }
+
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            /* overflow: hidden; */
+            width: 100vw;
+            height: 100vh;
+            height: var(--app-height);
+        }
+
+        .js-scrollify,
+        .section-bg,
+        .section-content {
+            height: var(--app-height) !important;
+        }
+    }
 
     @media (max-width: 768px) {
         :root {
