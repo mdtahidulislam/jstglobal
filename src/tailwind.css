@@ -102,7 +102,7 @@
         --app-height: 100%;
     }
 
-    html,
+    /* html,
     body {
         padding: 0;
         margin: 0;
@@ -114,7 +114,7 @@
 
     .app-height {
         height: var(--app-height);
-    }
+    } */
 
     /*======================================= 
                     common css 
@@ -462,6 +462,12 @@
     .service-box:nth-child(2) .service-box-content:after,
     .service-box:nth-child(2) .service-box-content:before {
         display: none;
+    }
+
+    /* new css */
+    /* contact page */
+    .bg-select-down-black {
+        background-image: url('../img/select-black-down-arrow.svg');
     }
 
     /*======================================= 
