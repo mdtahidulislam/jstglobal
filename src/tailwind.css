@@ -566,6 +566,10 @@
         .solutions-right {
             order: -1;
         }
-    }
 
+        .service-box-content:after,
+        .service-box-content:before {
+            height: 100%;
+        }
+    }
 }
