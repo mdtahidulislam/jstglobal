@@ -69,6 +69,7 @@ module.exports = {
                 'sustainability': "url('../img/sustainability-2x.png')",
                 'careers': "url('../img/careers-2x.png')",
                 'reliable-bg': "url('../img/propelar.png')",
+                'contact-banner': "url('../img/contact-banner.jpg')",
             },
             gridTemplateColumns: {
             },

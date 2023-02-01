@@ -464,6 +464,51 @@
         display: none;
     }
 
+    /* who we are */
+    .who-we-are-banner .section-desc {
+        max-width: 635px;
+    }
+
+    /* what we do page */
+    .what-we-do-banner .section-desc {
+        max-width: 635px;
+    }
+
+    .sustainability-banner .section-desc {
+        max-width: 635px;
+    }
+
+    .solutions-row:nth-child(even) .solutions-left {
+        order: 1;
+    }
+
+    .solutions-row:nth-child(even) .solutions-right-content {
+        padding-right: 7.5%;
+    }
+
+    .solutions-row:nth-child(even) .solutions-left {
+        border-left: 0;
+        border-right-width: 1px;
+    }
+
+    .solutions-row:nth-child(3) .solutions-right-content {
+        padding-right: 15%;
+    }
+
+    @media (min-width: 1441px) {
+        .who-we-are-banner .section-desc {
+            max-width: 44vw;
+        }
+
+        .what-we-do-banner .section-desc {
+            max-width: 44vw;
+        }
+
+        .sustainability-banner .section-desc {
+            max-width: 44vw;
+        }
+    }
+
     /* new css */
     /* contact page */
     .bg-select-down-black {
@@ -516,6 +561,10 @@
 
         .single-member {
             align-items: inherit !important;
+        }
+
+        .solutions-right {
+            order: -1;
         }
     }
 
