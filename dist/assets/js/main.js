@@ -173,11 +173,11 @@
         function appHeightvh() {
             const doc = document.documentElement;
             if ($(window).width() <= 992) {
-                const appHeight = () => {
-                    doc.style.setProperty('--app-height', `${window.innerHeight}px`)
-                }
-                window.addEventListener('resize', appHeight)
-                appHeight();
+                doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+                // const appHeight = () => {
+                // }
+                // window.addEventListener('resize', appHeight)
+                // appHeight();
             } else {
                 doc.style.setProperty('--app-height', `auto`);
             }
