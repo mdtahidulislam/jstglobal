@@ -170,15 +170,22 @@
 
         // fix 100vh for ios
 
-        if ($(window).width() <= 992) {
-            const appHeight = () => {
-                const doc = document.documentElement;
-                doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+        function appHeightvh() {
+            const doc = document.documentElement;
+            if ($(window).width() <= 992) {
+                const appHeight = () => {
+                    doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+                }
+                window.addEventListener('resize', appHeight)
+                appHeight();
+            } else {
+                doc.style.setProperty('--app-height', `auto`);
             }
-            window.addEventListener('resize', appHeight)
-            appHeight();
-        } else {
-            doc.style.setProperty('--app-height', `auto`);
         }
+        appHeightvh();
+
+        window.addEventListener("resize", function () {
+            appHeightvh();
+        });
     });
 }(jQuery));
