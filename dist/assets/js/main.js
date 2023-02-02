@@ -191,5 +191,16 @@
         window.addEventListener("resize", function () {
             appHeightvh();
         });
+
+        // contact form
+        function getFormData(formId) {
+            $(formId).on('submit', function (e) {
+                e.preventDefault();
+                var dataObj = $(this).serializeArray();
+                console.log(dataObj);
+                $(this)[0].reset();
+            });
+        }
+        getFormData('#contact-form');
     });
 }(jQuery));
