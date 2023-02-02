@@ -341,6 +341,7 @@
     .mobile-menu li a {
         font-size: 40px;
         line-height: 40px;
+        color: var(--blue-1);
     }
 
     @media (max-width:768px) {
@@ -513,6 +514,10 @@
     /* contact page */
     .bg-select-down-black {
         background-image: url('../img/select-black-down-arrow.svg');
+    }
+
+    .contact-form .section-title {
+        font-size: 52px;
     }
 
     /*======================================= 

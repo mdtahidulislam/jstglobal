@@ -10,14 +10,18 @@
 
                 $('.js-mobile-menu-area').toggleClass('active');
                 if ($(this).hasClass('active')) {
-                    $('.js-logo').addClass('invert');
+                    // $('.js-logo').addClass('invert');
+                    $('.js-logo').addClass('hidden');
+                    $('.js-mobile-logo').removeClass('hidden');
                     // fixed menu area
                     $('.js-header-inner').addClass('fixed');
                     $(this).removeClass('close');
                     $(this).parent('.js-menu-bar-btn').addClass('!fixed right-spacex border border-black');
                     $('.js-mobile-menu-area a').addClass('revealtext-anim');
                 } else {
-                    $('.js-logo').removeClass('invert');
+                    // $('.js-logo').removeClass('invert');
+                    $('.js-logo').removeClass('hidden');
+                    $('.js-mobile-logo').addClass('hidden');
                     $('.js-header-inner').removeClass('fixed');
                     $(this).addClass('close');
                     $(this).parent('.js-menu-bar-btn').removeClass('!fixed right-spacex border border-black');
