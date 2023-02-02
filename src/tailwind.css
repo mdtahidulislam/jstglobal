@@ -553,6 +553,7 @@
         }
 
         .js-scrollify,
+        .banner-inner,
         .section-bg,
         .section-content {
             height: var(--app-height) !important;
